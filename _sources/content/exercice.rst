@@ -58,15 +58,15 @@ passe réellement pour l'affichage d'une page web.
 
 On y accède par le menu contextuel (clic droit de souris) en sélectionnant l'entrée ``inspecter`` et qui ouvre une fenêtre contenant de nombreux outils.
 
-#. Aller sur le site **interstices.infos** puis effectuer une recherche sur le mot **internet**.
+#.  Aller sur le site **interstices.infos** puis effectuer une recherche sur le mot **internet**.
 
     a.  Relever l'url affichée dans la barre d'adresse du navigateur.
     b.  Que peut-on en déduire sur la requête HTTP effectuée ?
     c.  Afficher l'en-tête de la requête dans le navigateur en utilisant les outils de développement.
     d.  Quel.le.s sont les méthode, ressource et paramètres affichés ?
 
-#. Modifier l'url précédente pour effectuer une requête HTTP correspondant à une recherche sur le mot **turing** ?
-#. Comment réaliser une recherche sur les mots **turing** et **internet** en même temps en modifiant l'url précédente ?
+#.  Modifier l'url précédente pour effectuer une requête HTTP correspondant à une recherche sur le mot **turing** ?
+#.  Comment réaliser une recherche sur les mots **turing** et **internet** en même temps en modifiant l'url précédente ?
 
 
 Exercice 4
@@ -91,7 +91,7 @@ Nous allons effectuer les mêmes requêtes que l’exercice précédent en Pytho
 
 #.  La variable ``page`` doit contenir le contenu de la page web retournée par le serveur. On donne ci-dessous une fonction qui écrit dans un fichier le contenu d’une variable.
 
-    .. figure:: ../img/python-open.png
+    .. figure:: ../img/python-open.PNG
         :alt: image
         :align: center
         :width: 560
