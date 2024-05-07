@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modèle client serveur &#8212; NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=bf059b8c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/cours';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Exercices" href="exercice.html" />
+    <link rel="prev" title="Requêtes HTTP" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Haut de page
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Modèle client serveur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercice.html">Exercices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/cours.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modèle client serveur</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-requete-http">La requête HTTP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-reponse-du-serveur">La réponse du serveur</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modele-client-serveur">
+<h1>Modèle client serveur<a class="headerlink" href="#modele-client-serveur" title="Lien vers cette rubrique">#</a></h1>
+<p>HTTP est un protocole qui permet de récupérer des ressources d’un serveur web comme les documents HTML, des images ou des médias. Il est à la base de tout échange de données sur le Web. C’est un protocole de type <strong>client-serveur</strong>.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/modele_client_serveur_2.svg"><img alt="../_images/modele_client_serveur_2.svg" src="../_images/modele_client_serveur_2.svg" width="480" /></a>
+</figure>
+<p>Le protocole HTTP se déroule en 2 temps:</p>
+<ol class="arabic simple">
+<li><p>Le client initie la requête HTTP en demandant des ressources placées sur le serveur.</p></li>
+<li><p>Le serveur reçoit la requête HTTP, cherche les ressources demandées et envoie une réponse au client.</p></li>
+</ol>
+<p>Les principales applications qui réalisent des requêtes HTTP sont les navigateurs comme <strong>edge</strong>, <strong>firefox</strong> ou <strong>chrome</strong>.</p>
+<p>D’autres applications peuvent effectuer des requêtes HTTP.</p>
+<ul class="simple">
+<li><p>Par exemple en <strong>ligne de commande</strong> avec le programme <strong>CURL</strong> la commande <strong>linux</strong> <code class="docutils literal notranslate"><span class="pre">wget</span></code>.</p></li>
+<li><p>Avec un langage de programmation : en Python, le module <strong>requests</strong> permet d’effectuer des requêtes HTTP pour récupérer des données sur un seveur web.</p></li>
+</ul>
+<section id="la-requete-http">
+<h2>La requête HTTP<a class="headerlink" href="#la-requete-http" title="Lien vers cette rubrique">#</a></h2>
+<p>Une <strong>requête HTTP</strong> contient plusieurs informations utiles pour le serveur qui reçoit la requête :</p>
+<ul class="simple">
+<li><p>la méthode utilisée (<code class="docutils literal notranslate"><span class="pre">GET</span></code> ou <code class="docutils literal notranslate"><span class="pre">POST</span></code>),</p></li>
+<li><p>le nom de la ressource (fichier) que l’on souhaite récupérer,</p></li>
+<li><p>le protocole utilisé et de sa version (HTTP en version 1 ou 2)</p></li>
+<li><p>le destinataire <code class="docutils literal notranslate"><span class="pre">HOST</span></code> de la requête.</p></li>
+</ul>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../_images/requete_client.svg"><img alt="modele client serveur" src="../_images/requete_client.svg" width="300" /></a>
+<figcaption>
+<p><span class="caption-text">Requête HTTP d’un client</span><a class="headerlink" href="#id1" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+<p class="rubric">La méthode GET</p>
+<p>Dans un navigateur, la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code> est utilisée par défaut. Elle est accompagnée de plusieurs informations envoyées au serveur web:</p>
+<ul class="simple">
+<li><p>le nom de la <code class="docutils literal notranslate"><span class="pre">ressource</span></code> demandée,</p></li>
+<li><p>le protocole utilisé donc <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> ainsi que sa version <code class="docutils literal notranslate"><span class="pre">1</span></code> ou <code class="docutils literal notranslate"><span class="pre">2</span></code>,</p></li>
+<li><p>le destinataire ou <code class="docutils literal notranslate"><span class="pre">host</span></code> de la requête qui correspond au serveur web.</p></li>
+</ul>
+<p class="rubric">Méthode GET avec des paramètres</p>
+<p>Une requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> peut envoyer des <code class="docutils literal notranslate"><span class="pre">paramètres</span></code> au serveur web avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code>. Le serveur traite la requête et adapte sa réponse selon les valeurs données aux paramètres.</p>
+<div class="admonition warning">
+<p class="admonition-title">Avertissement</p>
+<p>Les paramètres sont prédéfinis sur le serveur sans quoi ils sont ignorés.</p>
+</div>
+<p>La syntaxe d’une requête <code class="docutils literal notranslate"><span class="pre">GET</span></code> avec des paramètres est la suivante:</p>
+<ul class="simple">
+<li><p>un <code class="docutils literal notranslate"><span class="pre">point</span> <span class="pre">d'interrogation</span></code> pour séparer l’url des paramètres,</p></li>
+<li><p>ensuite les paramètres et les valeurs reliées par le signe <code class="docutils literal notranslate"><span class="pre">égal</span></code>,</p></li>
+<li><p>de plus les différents paramètres sont séparés par des <code class="docutils literal notranslate"><span class="pre">esperluettes</span></code>.</p></li>
+<li><p>les espaces entre les valeurs d’un paramètre sont remplacés par les signes <code class="docutils literal notranslate"><span class="pre">plus</span></code>.</p></li>
+</ul>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>On effectue une recherche sur un moteur de recherche sur les mots <code class="docutils literal notranslate"><span class="pre">python</span></code> et <code class="docutils literal notranslate"><span class="pre">requête</span></code>. Le navigateur construit une requête avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code> en y ajoutant des paramètres.</p>
+<p>La requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> envoyée au serveur avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code> a pour valeur: <code class="docutils literal notranslate"><span class="pre">https://www.google.fr/search?q=python+requête</span></code>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/requete_parametre_1.png"><img alt="../_images/requete_parametre_1.png" src="../_images/requete_parametre_1.png" style="width: 560px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code> et des paramètres</span><a class="headerlink" href="#id2" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p class="rubric">La méthode POST</p>
+<p>La méthode <code class="docutils literal notranslate"><span class="pre">POST</span></code> permet d’envoyer des valeurs au serveur qui pourra les traiter. Les valeurs envoyées sont placées dans un tableau. Ce tableau, dit associatif, est placé dans le <strong>corps de la requête</strong> et non dans l’url comme avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code>. Cela permet de mieux sécuriser l’envoi de données vers le serveur.</p>
+<p>Pour envoyer des valeurs à un serveur web, on peut utiler un <strong>formulaire</strong>. Chaque champ de formulaire complété est associé à un paramètre. Un bouton d’envoi exécute la requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> qui envoie les données vers le serveur.</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Un blog contient une page d’authentification qui permet d’accéder à des contenus privés.</p>
+<p>La page web de connexion contient un formulaire avec 2 champs <strong>login</strong> et <strong>mot de passe</strong>.</p>
+<a class="reference internal image-reference" href="../_images/login_blogs.png"><img alt="../_images/login_blogs.png" class="align-center" src="../_images/login_blogs.png" style="width: 300px;" />
+</a>
+<p>Après avoir renseigné ces deux champs, on valide le formulaire et le navigateur effectue une requête avec la méthode <code class="docutils literal notranslate"><span class="pre">POST</span></code>. Les valeurs saisies sont envoyées au serveur sous la forme d’un tableau associatif au format <code class="docutils literal notranslate"><span class="pre">JSON</span></code> :</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="err">&#39;user_id&#39;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">&#39;bob&#39;</span><span class="p">,</span><span class="w"> </span><span class="err">&#39;user_pwd&#39;</span><span class="p">:</span><span class="err">&#39;lép</span><span class="mi">0</span><span class="kc">n</span><span class="err">Ge&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Les données ne sont pas ajoutées à l’url ! Si tel était le cas, ce serait un problème pour la sécurité et la confidentialité des données. Les données de la requête <code class="docutils literal notranslate"><span class="pre">POST</span></code> sont placées dans le corps de la requête.</p>
+</div>
+</section>
+<section id="la-reponse-du-serveur">
+<h2>La réponse du serveur<a class="headerlink" href="#la-reponse-du-serveur" title="Lien vers cette rubrique">#</a></h2>
+<p>Quelle que soit la méthode utilisée par le <strong>client</strong>, le serveur répond à la requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>. Sa réponse contient un code d’état, un statut et la ressource demandée.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/reponse_serveur.svg"><img alt="modele client serveur" src="../_images/reponse_serveur.svg" width="300" /></a>
+<figcaption>
+<p><span class="caption-text">Réponse HTTP du serveur</span><a class="headerlink" href="#id3" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+<p>Les codes d’état sont classés selon leurs statuts. Les plus courants sont :</p>
+<ul class="simple">
+<li><p>Si le statut de la requête est un succès, le code d’état vaut <code class="docutils literal notranslate"><span class="pre">200</span></code>;</p></li>
+<li><p>Si le statut de la requête a été redirigée vers un autre site web, le code d’état vaut <code class="docutils literal notranslate"><span class="pre">301</span></code>;</p></li>
+<li><p>Si le statut de la ressource n’est pas accessible, accès refusé, le code d’état vaut <code class="docutils literal notranslate"><span class="pre">403</span></code>;</p></li>
+<li><p>Si le statut de la ressource demandée n’est pas trouvée, le code vaut <code class="docutils literal notranslate"><span class="pre">404</span></code>;</p></li>
+<li><p>Si le serveur ne peut pas répondre (panne), le code vaut <code class="docutils literal notranslate"><span class="pre">500</span></code>;</p></li>
+</ul>
+<p>Suite à la requête d’un client avec la méthode <code class="docutils literal notranslate"><span class="pre">GET</span></code>, le serveur traite la requête et répond. Si la ressource demandée est trouvée, il la renvoie avec le code d’état 200.</p>
+<p>Avec la ressource demandée, un en-tête de réponse est ajouté et contient les éléments suivants:</p>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Suite à une requête <code class="docutils literal notranslate"><span class="pre">HTTP</span></code>, le serveur renvoie la ressource et un en-tête de réponse contenant différentes informations:</p>
+<ul class="simple">
+<li><p>Le type de contenu et son encodage : text/html; charset=UTF-8</p></li>
+<li><p>la taille du contenu : 28722 octets.</p></li>
+<li><p>La date et l’heure de l’envoi : 29 mars 2022</p></li>
+<li><p>Le serveur utilise l’application <strong>Apache</strong> qui est un serveur WEB,</p></li>
+<li><p>La connexion est fermée après l’envoi.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Requêtes HTTP</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercice.html"
+       title="page suivante">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">suivant</p>
+        <p class="prev-next-title">Exercices</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-requete-http">La requête HTTP</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-reponse-du-serveur">La réponse du serveur</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023,Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

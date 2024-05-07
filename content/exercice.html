@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+
+<html lang="fr" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercices &#8212; NSI</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=72dce1d2"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/translations.js?v=bf059b8c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/exercice';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="prev" title="Modèle client serveur" href="cours.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="fr"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Passer au contenu principal</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Haut de page
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">NSI</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Recherche</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cours.html">Modèle client serveur</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercices</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Téléchargez cette page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/content/exercice.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Télécharger le fichier source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimer au format PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Mode plein écran"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="clair/sombre" aria-label="clair/sombre" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Recherche" aria-label="Recherche" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exercices</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenu </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exercices">
+<h1>Exercices<a class="headerlink" href="#exercices" title="Lien vers cette rubrique">#</a></h1>
+<section id="exercice-1">
+<h2>Exercice 1<a class="headerlink" href="#exercice-1" title="Lien vers cette rubrique">#</a></h2>
+<p>On donne la capture des en-têtes d’une requête HTTP effectuée par un
+navigateur.</p>
+<ul>
+<li><p>Requête envoyée par le client:</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../_images/req3Ex1.jpg"><img alt="image" src="../_images/req3Ex1.jpg" style="width: 420px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Entête d’une requête HTTP</span><a class="headerlink" href="#id5" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>Réponse envoyée par le serveur:</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../_images/req4Ex1.jpg"><img alt="image" src="../_images/req4Ex1.jpg" style="width: 320px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Entête de la réponse</span><a class="headerlink" href="#id6" title="Lien vers cette image">#</a></p>
+</figcaption>
+</figure>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>Quelle est la méthode utilisée par cette requête HTTP ?</p></li>
+<li><p>Quelle est la ressource demandée dans cette requête ?</p></li>
+<li><p>Cette requête a été exécutée par un navigateur. Quelle url a été saisie ?</p></li>
+<li><p>La ressource demandée a-t-elle été renvoyée par le serveur ? Justifier.</p></li>
+<li><p>Quel est le type de données envoyées par le serveur pour cette ressource?</p></li>
+</ol>
+</section>
+<section id="exercice-2">
+<h2>Exercice 2<a class="headerlink" href="#exercice-2" title="Lien vers cette rubrique">#</a></h2>
+<p>Dans un navigateur, on saisit une url : <a class="reference external" href="https://interstices.info/intelligence-artificielle-intelligence-humaine/">https://interstices.info/intelligence-artificielle-intelligence-humaine/</a></p>
+<p>Le navigateur envoie une requête HTTP au serveur qui héberge la page WEB demandée.</p>
+<ol class="arabic simple">
+<li><p>Pour cette requête, quel.le est :</p>
+<ol class="loweralpha simple">
+<li><p>la méthode utilisée par cette requête ?</p></li>
+<li><p>la ressource demandée ?</p></li>
+<li><p>le destinataire de la requête ?</p></li>
+</ol>
+</li>
+<li><p>Saisir l’url dans un navigateur. Sur la page web affichée, faire un clic droit et sélectionner <code class="docutils literal notranslate"><span class="pre">inspecter</span></code> dans le menu contextuel. L’écran se divise en deux avec une nouvelle fenêtre appelée <strong>développement web</strong>.</p>
+<ol class="loweralpha simple">
+<li><p>Sélectionner l’onglet <code class="docutils literal notranslate"><span class="pre">réseau</span></code> ou <code class="docutils literal notranslate"><span class="pre">network</span></code> puis actualiser la page web.</p></li>
+<li><p>Sélectionner la ressource <code class="docutils literal notranslate"><span class="pre">intelligence-artificielle-intelligence-humaine</span></code>.</p></li>
+<li><p>Sélectionner l’onglet <code class="docutils literal notranslate"><span class="pre">en-tête</span></code> ou <code class="docutils literal notranslate"><span class="pre">headers</span></code>.</p></li>
+<li><p>Donner la méthode, la ressource et l’host de la requête <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-3">
+<h2>Exercice 3<a class="headerlink" href="#exercice-3" title="Lien vers cette rubrique">#</a></h2>
+<p>Les navigateurs proposent des outils de développement qui permettent aux développeurs de comprendre ce qui se
+passe réellement pour l’affichage d’une page web.</p>
+<p>On y accède par le menu contextuel (clic droit de souris) en sélectionnant l’entrée <code class="docutils literal notranslate"><span class="pre">inspecter</span></code> et qui ouvre une fenêtre contenant de nombreux outils.</p>
+<ol class="arabic">
+<li><p>Aller sur le site <strong>interstices.infos</strong> puis effectuer une recherche sur le mot <strong>internet</strong>.</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Relever l’url affichée dans la barre d’adresse du navigateur.</p></li>
+<li><p>Que peut-on en déduire sur la requête HTTP effectuée ?</p></li>
+<li><p>Afficher l’en-tête de la requête dans le navigateur en utilisant les outils de développement.</p></li>
+<li><p>Quel.le.s sont les méthode, ressource et paramètres affichés ?</p></li>
+</ol>
+</div></blockquote>
+</li>
+<li><p>Modifier l’url précédente pour effectuer une requête HTTP correspondant à une recherche sur le mot <strong>turing</strong> ?</p></li>
+<li><p>Comment réaliser une recherche sur les mots <strong>turing</strong> et <strong>internet</strong> en même temps en modifiant l’url précédente ?</p></li>
+</ol>
+</section>
+<section id="exercice-4">
+<h2>Exercice 4<a class="headerlink" href="#exercice-4" title="Lien vers cette rubrique">#</a></h2>
+<p>Le module <strong>requests</strong> de Python permet de réaliser des requêtes HTTP.</p>
+<p>On utilisera principalement les méthodes suivantes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get</span></code> et <code class="docutils literal notranslate"><span class="pre">post</span></code> pour effectuer nos requêttes HTTP: <code class="docutils literal notranslate"><span class="pre">rep=requests.get('url_du_site')</span></code> ou <code class="docutils literal notranslate"><span class="pre">rep=requests.post('url_du_site')</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">text</span></code> permet de récupérer le contenu renvoyé par le serveur : <code class="docutils literal notranslate"><span class="pre">print(rep.text)</span></code> affiche le contenu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> donne le contenu de l’en-tête de la réponse HTTP renvoyé par le serveur : <code class="docutils literal notranslate"><span class="pre">print(rep.headers)</span></code> affiche l’en-tête de la réponse HTTP.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status_code</span></code> contient la valeur du code de status de la requête : <code class="docutils literal notranslate"><span class="pre">rep.status_code</span></code> renvoie un entier.</p></li>
+</ul>
+<p>Nous allons effectuer les mêmes requêtes que l’exercice précédent en Python.</p>
+<ol class="arabic">
+<li><p>Importer le module <strong>requests</strong> dans votre feuille de programmes.</p></li>
+<li><p>Réaliser une première requêtte HTTP sur le site <code class="docutils literal notranslate"><span class="pre">interstices.infos</span></code> avec la méthode <code class="docutils literal notranslate"><span class="pre">get</span></code>. La réponse de la requête sera enregistrée dans la variable <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p>
+<ol class="loweralpha simple">
+<li><p>Comment peut-on afficher le code d’état ou le statut de la requête ?</p></li>
+<li><p>Comment peut-on afficher l’en-tête de la réponse à cette requête serveur.</p></li>
+</ol>
+</li>
+<li><p>La variable <code class="docutils literal notranslate"><span class="pre">page</span></code> doit contenir le contenu de la page web retournée par le serveur. On donne ci-dessous une fonction qui écrit dans un fichier le contenu d’une variable.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="img/python-open.png"><img alt="image" src="img/python-open.png" style="width: 560px;" />
+</a>
+</figure>
+<ol class="loweralpha simple">
+<li><p>Recopier cette fonction sur votre feuille de programmes.</p></li>
+<li><p>Créer le fichier <strong>ma_page.html</strong> avec le contenu de la variable <strong>page</strong> puis vérifier qu’elle s’affiche correctement dans un navigateur.</p></li>
+</ol>
+</li>
+<li><p>Effectuer une requête GET en passant en paramètre le mot <strong>internet</strong>. Afficher le code d’état de la réponse HTTP.</p>
+<ol class="loweralpha simple">
+<li><p>Enregistrer dans la variable <strong>page</strong> le contenu de la réponse du serveur.</p></li>
+<li><p>Afficher dans le navigateur le contenu de la variable <strong>page</strong>.</p></li>
+</ol>
+</li>
+<li><p>On peut affiner la recherche sur le site en utilisant plus de paramètres. Les paramètres disponibles sont :</p>
+<ul class="simple">
+<li><p><cite>s</cite> pour la recherche d’un mot</p></li>
+<li><p><cite>fwp_themes</cite> pour le domaine de recherche</p></li>
+<li><p><cite>fwp_type</cite> pour le type de ressource recherchée</p></li>
+<li><p><cite>fwp_sort</cite> pour l’ordre chronologique d’affichage (date_desc ou date_asc)</p></li>
+</ul>
+<p>Les valeurs des paramètres sont prédéfinies par le site.</p>
+<p>Pour ajouter plusieurs paramètres dans une requête en python, on peut les inclure dans l’url ou alors utiliser une variable <cite>p</cite> qui contient les paramètre et les valeurs. Dans ce cas, on utilise un dictionnaire qui se note entre accolades : <a href="#id1"><span class="problematic" id="id2">``</span></a>{ “paramètre 1”:”valeur”, “parametre 2”: “valeur”, “parametre 3”: “valeur”}.</p>
+<p>La variable qui contient les paramètres sera placée dans l’appel de la requête, juste après l’url du site, séparé par une virgule : <a href="#id3"><span class="problematic" id="id4">``</span></a>rep=requests.get(“url du site”,params = p)</p>
+<p>On va effectuer une recherche approfondie sur le mot « internet », sur le thème « algorithmes », sous forme d“« articles » et rangés par ordre chronologique décroissant</p>
+<ol class="loweralpha simple">
+<li><p>Effectuer cette recherche sur le site puis relever le nombre de résultats et la date du premier article affiché.</p></li>
+<li><p>Effectuer la même requete en Python puis enregistre le contenu de la réponse dans le fichier <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code></p></li>
+<li><p>Afficher dans un navigateur <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code> puis comparer avec la recherche faite sur le site.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-5">
+<h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien vers cette rubrique">#</a></h2>
+<p>Le site <a class="reference external" href="https://www.httpbin.org/forms/post">www.httpbin.org</a> permet de réaliser une requête avec la méthode POST grace à un formulaire. On va observer
+l’envoi des données par ce formulaire et réaliser le même envoi en Python.</p>
+<ol class="arabic simple">
+<li><p>Compléter le formulaire puis le soumettre avec le bouton placé en bas de page.</p></li>
+<li><p>Quelle est l’url d’envoi de ce formulaire ? Est-elle modifiée ?</p></li>
+<li><p>Relever le nom des différents paramètres utilisé pour l’envoi de ce formulaire.</p></li>
+<li><p>En python, créer une variable <cite>p</cite> contenant les paramètres du formulaire et leurs valeurs.</p></li>
+<li><p>Créer votre requête avec la méthode POST et enregistrer le résultat dans la variable <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
+<li><p>Quel est le type de contenu renvoyé par le serveur. Quelle commande Python permet de le savoir.</p></li>
+<li><p>Créer un fichier contenant le résultat de la requête puis l’afficher dans le navigateur.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="cours.html"
+       title="page précédente">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">précédent</p>
+        <p class="prev-next-title">Modèle client serveur</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenu
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">Exercice 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-2">Exercice 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-3">Exercice 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-4">Exercice 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-5">Exercice 5</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Par Yannick Chistel
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023,Yannick Chistel.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
