@@ -1,0 +1,105 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{style2017}
+\newcounter{numexo}
+\setcellgapes{1pt}
+\setlength{\parskip}{0.25cm}
+
+\begin{document}
+
+
+\begin{NSI}
+{TP}{protocole HTTP}
+\end{NSI}
+
+
+Les navigateurs web effectuent des requêtes HTTP pour afficher les contenus d'un site web. Ces navigateurs, disposent de fonctionnalités appelées outils de développement, qui permettent de comprendre ce qui est réellement chargé sur l'ordinateur quand on visite un site web.
+\medskip
+Une fois le navigateur ouvert, on accède à ces outils par le menu ou par la touche F12. Différents onglets sont affichés. Pour étudier nos requêtes HTTP, on utilisera l'onglet \textbf{Réseau}.
+
+\subsection*{Une première page web}
+Ouvrir le navigateur firefox, taper sur la touche F12, choisir l'onglet réseau puis saisir l'url \textbf{interstices.info}.\medskip
+
+\begin{enumerate}
+\item Combien de requêtes HTTP ont été effectuées par le navigateur pour afficher la page web? \vspace{1cm}
+
+\item Quelles sont les méthodes employées par ces requêtes HTTP ?\vspace{1cm}
+
+\item Quels sont les différents codes d'état des différentes réponses HTTP ? \vspace{1cm}
+
+\item Que signifie le code d'état 304 ? \vspace{1cm}
+
+\item Quels sont les différents types de contenus renvoyés par le serveur ? \vspace{3cm}
+%
+%\item Certains fichiers sont transférés d'autres non. Pourquoi ? Expliquer ce que fait le navigateur.
+%\item Cocher l'option \textbf{Désactiver le cache} puis recharger la page. Quelles différences a-t-on ?
+\end{enumerate}
+
+%\subsection*{Requête et réponse en détail}
+%
+%Pour recharger une page, il suffit d'appuyer sur la touche F5 ou cliquer sur le bouton actualiser.
+%
+%On \textbf{sélectionne la première ligne}, celle correspondant à la requête initiale pour afficher la page d'accueil.
+%
+%La fenêtre est divisée en deux. À droite, on remarque différents onglets dont les en-têtes.
+%
+%\begin{enumerate}
+%\item Quelle est la requête HTTP ? Quelles informations contient l'en-tête de la requête ?
+%\item Quelle est la réponse HTTP ? Quelles informations contient l'en-tête de la réponse ?
+%\item Cliquer sur le bouton \textbf{Renvoyer} puis sur \textbf{Modifier et renvoyer}. La requête HTTP est affichée.
+%\begin{enumerate}
+%\item Ajouter dans l'url, le mot "dossier" puis cliquer sur le bouton \textbf{Envoyer}. Sélectionner dans la liste votre requête et vérifier son code d'état et afficher l'aperçu de la réponse. 
+%\item Remplacer dans l'url, le mot "dossier" par le mot "domaine" puis cliquer sur le bouton \textbf{Envoyer}. Sélectionner dans la liste votre requête et vérifier son code d'état et afficher l'aperçu de la réponse.
+%\item Ajouter à l'url précédente, le mot "algorithmes" puis cliquer sur le bouton \textbf{Envoyer}. Sélectionner dans la liste votre requête et vérifier son code d'état et afficher l'aperçu de la réponse.
+%\end{enumerate}
+%\item Dans l'onglet \textbf{Réponse}, sélectionner \textbf{Charge utile de la réponse} (sous l'aperçu). Quel est le type de contenu ? 
+%\end{enumerate}
+%
+%\newpage
+%\section{Requêtes HTTP et paramètres}
+
+
+
+\subsection*{Requête et recherche textuelle}
+
+%Une requête peut contenir des valeurs que l'on passe en paramètre dans l'url. Le serveur récupère les valeurs et constitue une réponse en fonction de ces paramètres. Bien entendu, ces paramètres sont connus du serveur au préalable.
+
+Sur la page d'accueil du site \textbf{Interstices.info}, vous avez dans le menu une zone de recherche matérialisée par une loupe.\medskip
+
+\begin{enumerate}
+\item Saisir le mot \textbf{requête} dans la zone de recherche puis valider. Combien de réponses obtient-on ? \vspace{1cm} ?
+
+\item Comment est transmise au serveur la recherche effectuée sur la page web ? \vspace{1cm}
+
+
+\newpage
+\item La méthode utilisée pour la requête HTTP lors de cette recherche est \textsf{GET}. Des informations ont été ajoutées dans l'en-tête de la requête. Lesquelles ? \vspace{2cm}
+
+
+
+\item Sans utiliser l'outil de recherche de la page web, réaliser une requête HTTP en remplaçant le mot \textbf{requête} par le mot \textbf{secret} puis donner le nombre de résultats obtenus. \vspace{2cm}
+
+
+
+\end{enumerate}
+
+\subsection*{Requête et envoi d'informations}
+
+Sur les sites web, un lien est souvent disponible pour contacter les administrateurs du site.
+
+\begin{enumerate}
+\item Quel est le lien qui permet de contacter le site \textsf{interstices.info} ?\vspace{1cm}
+
+\item Comment se présente la page web accessible par ce lien ? Quels en sont les éléments ? \vspace{2cm}
+
+\item Sans compléter la page, cliquer sur le bouton \textsf{envoyer}. Repérer dans la fenêtre de développement la méthode utilisée pour cette requête HTTP ? \vspace{1cm}
+
+\item Complétez tous les champs proposés puis envoyez votre message. Les informations envoyées sont-elles ajoutées à l'url ? \vspace{1cm} 
+
+\item Comment sont envoyées les informations saisies ? \vspace{3cm}
+
+\item Après l'envoi, le formulaire est vidé mai un message est affiché en bas de page. Selon vous, comment ce message a-t-il été récupéré ? \vspace{4cm}
+
+\end{enumerate}
+\end{document}
+

@@ -1,0 +1,25 @@
+{
+  "args": {
+    "comments": "chaud", 
+    "custemail": "bob@leponge.net", 
+    "custname": "bob", 
+    "custtel": "0201", 
+    "delivery": "19:00", 
+    "size": "medium", 
+    "topping": "cheese"
+  }, 
+  "data": "", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept": "*/*", 
+    "Accept-Encoding": "gzip, deflate", 
+    "Content-Length": "0", 
+    "Host": "www.httpbin.org", 
+    "User-Agent": "python-requests/2.28.1", 
+    "X-Amzn-Trace-Id": "Root=1-63dbfb4e-7629d44b660f2aae44191986"
+  }, 
+  "json": null, 
+  "origin": "81.220.115.88", 
+  "url": "https://www.httpbin.org/post?comments=chaud&custemail=bob%40leponge.net&custname=bob&custtel=0201&delivery=19%3A00&size=medium&topping=cheese"
+}

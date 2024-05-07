@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="90.982536mm"
+   height="90.436195mm"
+   viewBox="0 0 90.982536 90.436195"
+   version="1.1"
+   id="svg1093"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="reponse_serveur.svg">
+  <defs
+     id="defs1087" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="508.7062"
+     inkscape:cy="175.53108"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata1090">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-104.38292,-29.894809)">
+    <g
+       id="g1835">
+      <rect
+         style="opacity:0.93999999;fill:#e2f2e3;fill-opacity:1;stroke:#666666;stroke-width:0.48229438;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect1712"
+         width="90.500244"
+         height="89.953903"
+         x="104.62407"
+         y="30.135956"
+         ry="0" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:6.34017038px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15850425"
+         x="109.28987"
+         y="54.132801"
+         id="text1716"><tspan
+           sodipodi:role="line"
+           id="tspan1714"
+           x="109.28987"
+           y="54.132801"
+           style="stroke:none;stroke-width:0.15850425">Réponse HTTP:</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:4.64665079px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.11616626"
+         x="114.1899"
+         y="60.654873"
+         id="text1726"
+         transform="scale(0.95918523,1.0425515)"><tspan
+           sodipodi:role="line"
+           x="114.1899"
+           y="60.654873"
+           style="stroke-width:0.11616626"
+           id="tspan1722">protocole et version : HTTP/1.1</tspan><tspan
+           sodipodi:role="line"
+           x="114.1899"
+           y="66.463188"
+           style="stroke-width:0.11616626"
+           id="tspan1724">statut et code d'état : 200 ok</tspan><tspan
+           id="tspan1794"
+           sodipodi:role="line"
+           x="114.1899"
+           y="72.2715"
+           style="stroke-width:0.11616626">contenu du fichier demandé</tspan></text>
+      <rect
+         style="fill:none;stroke:#00aa00;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect1728"
+         width="51.048477"
+         height="9.4880686"
+         x="107.76188"
+         y="47.303444"
+         ry="1.8040684" />
+      <text
+         id="text1732"
+         y="95.02504"
+         x="109.28987"
+         style="font-style:normal;font-weight:normal;font-size:6.34017038px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15850425"
+         xml:space="preserve"><tspan
+           style="stroke:none;stroke-width:0.15850425"
+           y="95.02504"
+           x="109.28987"
+           id="tspan1730"
+           sodipodi:role="line">Exemple de réponse:</tspan></text>
+      <text
+         id="text1740"
+         y="98.448669"
+         x="115.25145"
+         style="font-style:normal;font-weight:normal;font-size:4.5978508px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.11494626"
+         xml:space="preserve"
+         transform="scale(0.94911175,1.0536167)"><tspan
+           id="tspan1734"
+           style="stroke-width:0.11494626"
+           y="98.448669"
+           x="115.25145"
+           sodipodi:role="line">HTTP/1.1</tspan><tspan
+           style="stroke-width:0.11494626"
+           y="104.19598"
+           x="115.25145"
+           sodipodi:role="line"
+           id="tspan1736">200 ok</tspan><tspan
+           style="stroke-width:0.11494626"
+           y="109.9433"
+           x="115.25145"
+           sodipodi:role="line"
+           id="tspan1738">&lt;h1&gt;Coucou&lt;/h1&gt;</tspan></text>
+      <g
+         style="stroke:#00aa00"
+         transform="translate(98.27381)"
+         id="g1744">
+        <rect
+           style="fill:none;stroke:#00aa00;stroke-width:0.59387803;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect1742"
+           width="72.737068"
+           height="9.3941908"
+           x="9.5350075"
+           y="88.242615"
+           ry="1.7862184" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#217821;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         x="118.33313"
+         y="41.568611"
+         id="text1748"><tspan
+           sodipodi:role="line"
+           id="tspan1746"
+           x="118.33313"
+           y="41.568611"
+           style="fill:#217821;stroke-width:0.26458332">- SERVEUR -</tspan></text>
+    </g>
+  </g>
+</svg>

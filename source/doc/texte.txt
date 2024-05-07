@@ -1,0 +1,23 @@
+Fonctionnement du WEB
+
+Introduction
+Le mot WEB est une abréviation de l'expression World Wide WEB qui signifie "toile d'araignée de taille mondiale".
+Le principe du WEB consiste à relier des documents entre eux via des liens hypertextes. Un lien hypertexte est un mot, une phrase ou une image qui permet d'accéder au document vers lequel il renvoie.
+Pour afficher et lire un document du WEB, on utilise un logiciel appelé navigateur. Il en existe de nombreux comme FIREFOX, CHROME, EDGE, OPERA,...
+
+Langages du WEB
+Différents langages sont utilisés pour structurer et afficher les documents du WEB :
+1. Le langage HTML qui est composé du contenu et de la structure du document à afficher par le navigateur ;
+2. Le langage CSS qui assure la mise en page et l'apparence graphique du document ;
+3. Le langage JAVASCRIPT qui permet d'ajouter de l'interactivité au document.
+
+Langage HTML
+HTML est l'acronyme de Hyper Text Markup Language signifiant Langage de Balisage Hyper Texte.
+Le Langage HTML est un fichier texte qui est composé du contenu à afficher et de la structure du document selon laquelle le contenu est organisé : titre, paragraphe, emphase, liste, lien, image, etc.
+Il existe une version stricte du HTML notée XHTML imposant une syntaxe plus rigoureuse que nous utiliserons.
+
+Balisage
+La structure du document est décrite par des balises, qui sont des mots délimités par les caractères < et > appelés chevrons. On a 2 types de balises:
+- Les balises ouvrantes et fermantes : <balise> contenu </balise>
+- Les balises vides : <balise />
+Les balises peuvent contenir des attributs qui sont des propriétés supplémentaires à appliquer au contenu à afficher.
