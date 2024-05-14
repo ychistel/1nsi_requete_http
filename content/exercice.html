@@ -30,7 +30,7 @@
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=ee3a1228" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
@@ -322,20 +322,20 @@ document.write(`
 navigateur.</p>
 <ul>
 <li><p>Requête envoyée par le client:</p>
-<figure class="align-center" id="id5">
+<figure class="align-center" id="id1">
 <a class="reference internal image-reference" href="../_images/req3Ex1.jpg"><img alt="image" src="../_images/req3Ex1.jpg" style="width: 420px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Entête d’une requête HTTP</span><a class="headerlink" href="#id5" title="Lien vers cette image">#</a></p>
+<p><span class="caption-text">Entête d’une requête HTTP</span><a class="headerlink" href="#id1" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </li>
 <li><p>Réponse envoyée par le serveur:</p>
-<figure class="align-center" id="id6">
+<figure class="align-center" id="id2">
 <a class="reference internal image-reference" href="../_images/req4Ex1.jpg"><img alt="image" src="../_images/req4Ex1.jpg" style="width: 320px;" />
 </a>
 <figcaption>
-<p><span class="caption-text">Entête de la réponse</span><a class="headerlink" href="#id6" title="Lien vers cette image">#</a></p>
+<p><span class="caption-text">Entête de la réponse</span><a class="headerlink" href="#id2" title="Lien vers cette image">#</a></p>
 </figcaption>
 </figure>
 </li>
@@ -414,29 +414,29 @@ passe réellement pour l’affichage d’une page web.</p>
 </figure>
 <ol class="loweralpha simple">
 <li><p>Recopier cette fonction sur votre feuille de programmes.</p></li>
-<li><p>Créer le fichier <strong>ma_page.html</strong> avec le contenu de la variable <strong>page</strong> puis vérifier qu’elle s’affiche correctement dans un navigateur.</p></li>
+<li><p>Créer le fichier <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code> avec le contenu de la variable <code class="docutils literal notranslate"><span class="pre">page</span></code> puis vérifier qu’elle s’affiche correctement dans un navigateur.</p></li>
 </ol>
 </li>
-<li><p>Effectuer une requête GET en passant en paramètre le mot <strong>internet</strong>. Afficher le code d’état de la réponse HTTP.</p>
+<li><p>Effectuer une requête GET en passant en paramètre le mot <code class="docutils literal notranslate"><span class="pre">internet</span></code>. Afficher le code d’état de la réponse HTTP.</p>
 <ol class="loweralpha simple">
-<li><p>Enregistrer dans la variable <strong>page</strong> le contenu de la réponse du serveur.</p></li>
-<li><p>Afficher dans le navigateur le contenu de la variable <strong>page</strong>.</p></li>
+<li><p>Enregistrer dans la variable <code class="docutils literal notranslate"><span class="pre">page</span></code> le contenu de la réponse du serveur.</p></li>
+<li><p>Afficher dans le navigateur le contenu de la variable <code class="docutils literal notranslate"><span class="pre">page</span></code>.</p></li>
 </ol>
 </li>
 <li><p>On peut affiner la recherche sur le site en utilisant plus de paramètres. Les paramètres disponibles sont :</p>
 <ul class="simple">
-<li><p><cite>s</cite> pour la recherche d’un mot</p></li>
-<li><p><cite>fwp_themes</cite> pour le domaine de recherche</p></li>
-<li><p><cite>fwp_type</cite> pour le type de ressource recherchée</p></li>
-<li><p><cite>fwp_sort</cite> pour l’ordre chronologique d’affichage (date_desc ou date_asc)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">s</span></code> pour la recherche d’un mot</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fwp_themes</span></code> pour le domaine de recherche</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fwp_type</span></code> pour le type de ressource recherchée</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fwp_sort</span></code> pour l’ordre chronologique d’affichage (date_desc ou date_asc)</p></li>
 </ul>
 <p>Les valeurs des paramètres sont prédéfinies par le site.</p>
-<p>Pour ajouter plusieurs paramètres dans une requête en python, on peut les inclure dans l’url ou alors utiliser une variable <cite>p</cite> qui contient les paramètre et les valeurs. Dans ce cas, on utilise un dictionnaire qui se note entre accolades : <a href="#id1"><span class="problematic" id="id2">``</span></a>{ “paramètre 1”:”valeur”, “parametre 2”: “valeur”, “parametre 3”: “valeur”}.</p>
-<p>La variable qui contient les paramètres sera placée dans l’appel de la requête, juste après l’url du site, séparé par une virgule : <a href="#id3"><span class="problematic" id="id4">``</span></a>rep=requests.get(“url du site”,params = p)</p>
-<p>On va effectuer une recherche approfondie sur le mot « internet », sur le thème « algorithmes », sous forme d“« articles » et rangés par ordre chronologique décroissant</p>
+<p>Pour ajouter plusieurs paramètres dans une requête en python, on peut les inclure dans l’url ou alors utiliser une variable <cite>p</cite> qui contient les paramètre et les valeurs. Dans ce cas, on utilise un dictionnaire qui se note entre accolades : <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">'paramètre</span> <span class="pre">1':'valeur',</span> <span class="pre">'parametre</span> <span class="pre">2':</span> <span class="pre">'valeur',</span> <span class="pre">'parametre</span> <span class="pre">3':</span> <span class="pre">'valeur'}</span></code>.</p>
+<p>La variable qui contient les paramètres sera placée dans l’appel de la requête, juste après l’url du site, séparé par une virgule : <code class="docutils literal notranslate"><span class="pre">rep=requests.get('url</span> <span class="pre">du</span> <span class="pre">site',params</span> <span class="pre">=</span> <span class="pre">p)</span></code></p>
+<p>On va effectuer une recherche approfondie sur le mot <code class="docutils literal notranslate"><span class="pre">internet</span></code>, sur le thème <code class="docutils literal notranslate"><span class="pre">algorithmes</span></code> et comme des <code class="docutils literal notranslate"><span class="pre">articles</span></code> et rangés par ordre chronologique décroissant.</p>
 <ol class="loweralpha simple">
 <li><p>Effectuer cette recherche sur le site puis relever le nombre de résultats et la date du premier article affiché.</p></li>
-<li><p>Effectuer la même requete en Python puis enregistre le contenu de la réponse dans le fichier <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code></p></li>
+<li><p>Effectuer la même requete en Python puis enregistrer le contenu de la réponse dans le fichier <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code></p></li>
 <li><p>Afficher dans un navigateur <code class="docutils literal notranslate"><span class="pre">ma_page.html</span></code> puis comparer avec la recherche faite sur le site.</p></li>
 </ol>
 </li>
@@ -444,14 +444,13 @@ passe réellement pour l’affichage d’une page web.</p>
 </section>
 <section id="exercice-5">
 <h2>Exercice 5<a class="headerlink" href="#exercice-5" title="Lien vers cette rubrique">#</a></h2>
-<p>Le site <a class="reference external" href="https://www.httpbin.org/forms/post">www.httpbin.org</a> permet de réaliser une requête avec la méthode POST grace à un formulaire. On va observer
-l’envoi des données par ce formulaire et réaliser le même envoi en Python.</p>
+<p>Le site <a class="reference external" href="https://www.httpbin.org/forms/post">www.httpbin.org</a> permet de réaliser une requête avec la méthode <code class="docutils literal notranslate"><span class="pre">POST</span></code> grace à un formulaire. On va observer l’envoi des données par ce formulaire et réaliser le même envoi en Python.</p>
 <ol class="arabic simple">
 <li><p>Compléter le formulaire puis le soumettre avec le bouton placé en bas de page.</p></li>
 <li><p>Quelle est l’url d’envoi de ce formulaire ? Est-elle modifiée ?</p></li>
 <li><p>Relever le nom des différents paramètres utilisé pour l’envoi de ce formulaire.</p></li>
-<li><p>En python, créer une variable <cite>p</cite> contenant les paramètres du formulaire et leurs valeurs.</p></li>
-<li><p>Créer votre requête avec la méthode POST et enregistrer le résultat dans la variable <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
+<li><p>En python, créer une variable <code class="docutils literal notranslate"><span class="pre">p</span></code> contenant les paramètres du formulaire et leurs valeurs.</p></li>
+<li><p>Créer votre requête avec la méthode <code class="docutils literal notranslate"><span class="pre">POST</span></code> et enregistrer le résultat dans la variable <code class="docutils literal notranslate"><span class="pre">rep</span></code>.</p></li>
 <li><p>Quel est le type de contenu renvoyé par le serveur. Quelle commande Python permet de le savoir.</p></li>
 <li><p>Créer un fichier contenant le résultat de la requête puis l’afficher dans le navigateur.</p></li>
 </ol>
