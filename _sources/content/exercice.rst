@@ -63,7 +63,7 @@ On y accède par le menu contextuel (clic droit de souris) en sélectionnant l'e
     a.  Relever l'url affichée dans la barre d'adresse du navigateur.
     b.  Que peut-on en déduire sur la requête HTTP effectuée ?
     c.  Afficher l'en-tête de la requête dans le navigateur en utilisant les outils de développement.
-    d.  Quel.le.s sont les méthode, ressource et paramètres affichés ?
+    d.  Quelles sont la méthode, la ressource et les paramètres affichés ?
 
 #.  Modifier l'url précédente pour effectuer une requête HTTP correspondant à une recherche sur le mot **turing** ?
 #.  Comment réaliser une recherche sur les mots **turing** et **internet** en même temps en modifiant l'url précédente ?
@@ -84,7 +84,7 @@ On utilisera principalement les méthodes suivantes:
 Nous allons effectuer les mêmes requêtes que l’exercice précédent en Python.
 
 #.  Importer le module **requests** dans votre feuille de programmes.
-#.  Réaliser une première requêtte HTTP sur le site ``interstices.infos`` avec la méthode ``get``. La réponse de la requête sera enregistrée dans la variable ``rep``.
+#.  Réaliser une première requêtte HTTP sur le site ``interstices.info`` avec la méthode ``get``. La réponse de la requête sera enregistrée dans la variable ``rep``.
 
     a.  Comment peut-on afficher le code d'état ou le statut de la requête ?
     b.  Comment peut-on afficher l'en-tête de la réponse à cette requête serveur.
